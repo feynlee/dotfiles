@@ -23,6 +23,7 @@ dependencies:
   - py4j
   - beautifulsoup4
   - ipykernel
+  - pyspark
   - pip:
     - datetime
     - bs4
