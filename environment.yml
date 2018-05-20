@@ -33,3 +33,4 @@ dependencies:
     - pyathenajdbc
     - fuzzywuzzy
     - pyarrow
+    - jupyter_contrib_nbextensions

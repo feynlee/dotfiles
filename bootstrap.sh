@@ -34,6 +34,9 @@ export PATH="Applications/anaconda3/bin:$PATH" >> ~/.bashrc
 # use conda to install all python packages
 conda install -y nb_conda_kernels
 conda env create -f $DOTFILES_HOME/environment.yml
+# install notebook extensions
+pip install --upgrade pip
+jupyter contrib nbextension install --user
 
 # jupyter configuration
 # touch ~/.jupyter/jupyter_notebook_config.py
