@@ -1,0 +1,34 @@
+name: py27
+
+dependencies:
+  - python=2.7
+  - numpy
+  - matplotlib
+  - cython
+  - dill
+  - pandas
+  - scipy
+  - jupyter
+  - dill
+  - boto
+  - boto3
+  - scikit-learn
+  - wrapt
+  - Ipython
+  - psycopg2
+  - s3fs
+  - spacy
+  - bokeh
+  - seaborn
+  - py4j
+  - beautifulsoup4
+  - ipykernel
+  - pip:
+    - datetime
+    - bs4
+    - usaddress
+    - geocoder
+    - smartystreets_python_sdk
+    - pyathenajdbc
+    - fuzzywuzzy
+    - pyarrow
