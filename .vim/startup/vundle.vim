@@ -29,7 +29,9 @@ Plugin 'Syntastic'
 
 " Editing plugins
 Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'maralla/completor.vim'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplcache.vim'
 Plugin 'vim-scripts/tComment'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
@@ -83,4 +85,3 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-

@@ -81,7 +81,7 @@ nmap <silent> ,en :e ~/.vim/bundle/TeX-9/ftplugin/tex_nine.vim <CR>
 " Edit the Ultisnips snippets
 nmap <silent> ,et :e ~/.vim/Ulti_Snips/tex.snippets<CR>
 nmap <silent> ,eh :e ~/.vim/Ulti_Snips/html.snippets<CR>
-nmap <silent> ,ea :e ~/.vim/Ulti_Snips/all.snippets<CR>
+nmap <silent> ,es :e ~/.vim/Ulti_Snips/all.snippets<CR>
 nmap <silent> ,vv :e ~/.vim/startup/vundle.vim <CR>
 " Better tabbing
 vnoremap < <gv

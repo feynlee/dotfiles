@@ -9,7 +9,7 @@ first_lftp () {
 }
 
 get_premover() {
-	python2 $FIRST_HOME/pipeline/premover/premover_download_upload.py $1 $2
+	/Applications/anaconda3/envs/py27/bin/python $FIRST_HOME/pipeline/premover/premover_download_upload.py $1 $2
 }
 
 

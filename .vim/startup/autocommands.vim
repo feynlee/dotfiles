@@ -36,8 +36,8 @@ au VimResized * exe "normal! \<c-w>="
 
 " When in vimrc automatically map ,e and ,so to edit and source new setting
 " files
-au BufEnter ~/.vim/vimrc inoremap <buffer> ,so source ~/.vim/startup/
-au BufEnter ~/.vim/vimrc nnoremap <buffer> ,e  :e ~/.vim/startup/
+au BufEnter ~/Code/dotfiles/.vim/vimrc inoremap <buffer> ,so source ~/.vim/startup/
+au BufEnter ~/Code/dotfiles/.vim/vimrc nnoremap <buffer> ,e  :e ~/.vim/startup/
 au BufEnter ~/.vimrc inoremap <buffer> ,so source ~/.vim/startup/
 au BufEnter ~/.vimrc nnoremap <buffer> ,e  :e ~/.vim/startup/
 

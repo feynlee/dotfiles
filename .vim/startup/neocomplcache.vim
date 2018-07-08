@@ -11,4 +11,5 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 " Overwrite other plugins' 'completefunc' option, protect neocomplcache from
 " being disabled by other plugins
-" let g:neocomplete#force_overwrite_completefunc = 1
+"" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" let g:neocomplete#force_overwrite_completefunc = 1

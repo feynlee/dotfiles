@@ -1,7 +1,9 @@
+export AWS_PROFILE="default"
 export CODE_HOME="$HOME/Code"
 export DOTFILES_HOME="$HOME/Code/dotfiles"
+export DOTFILES_PRIVATE_HOME="$HOME/Code/dotfiles_private"
 export BASH_HOME="$DOTFILES_HOME/bash"
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+export PATH=~/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin/:$PATH
 
 alias  bp="vim ~/.bash_profile"
 alias  rc="vim ~/.bashrc"
@@ -15,10 +17,12 @@ alias  so=". ~/.bash_profile"
 
 alias  setup_tmux="vim ~/.tmux/data-tmux"
 
+alias  first="cd $CODE_HOME/Data_analysis/First"
 alias  data="cd $CODE_HOME/Data_analysis; Jupyter notebook"
 alias  code="cd $CODE_HOME"
 alias  dot="cd $DOTFILES_HOME"
-alias  site="cd $CODE_HOME/sites"
+alias  dotp="cd $DOTFILES_PRIVATE_HOME"
+alias  site="cd ~/Documents/code/sites"
 alias  model="cd $CODE_HOME/Data_analysis/First/predictive-model"
 alias  nmodel="cd $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li"
 alias  batch="vim $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li/lib/_resources/Batch_list.csv"
@@ -33,7 +37,9 @@ alias  vesta="cd $CODE_HOME/Data_analysis/First/vesta/"
 alias  cortex="cd $CODE_HOME/Data_analysis/First/cortex/"
 alias  pipeline="cd $CODE_HOME/Data_analysis/First/pipeline/"
 alias  davinci="cd $CODE_HOME/Data_analysis/First/davinci/"
-eval "$(thefuck --alias fuck)"
+alias  analysis="cd $CODE_HOME/Data_analysis/First/data_analysis/"
+alias  lead="cd $CODE_HOME/Data_analysis/First/list_scoring_projects/"
+#eval "$(thefuck --alias fuck)"
 
 # source other files
 source ~/.keys

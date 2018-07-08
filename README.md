@@ -1,4 +1,5 @@
 # Bootstrap
+
  ```bash
 # Install the dotfiles
 git clone https://github.com/feynlee/dotfiles.git ~/Code/dotfiles

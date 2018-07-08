@@ -20,10 +20,12 @@ dependencies:
   - spacy
   - bokeh
   - seaborn
+  - wget
   - py4j
   - beautifulsoup4
   - ipykernel
   - pyspark
+  - simplejson
   - pip:
     - datetime
     - bs4
@@ -33,4 +35,6 @@ dependencies:
     - pyathenajdbc
     - fuzzywuzzy
     - pyarrow
+    - geopy
     - jupyter_contrib_nbextensions
+    - awscli

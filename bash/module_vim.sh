@@ -1,4 +1,4 @@
 recompile_ycm() {
 	cd ~/.vim/bundle/YouCompleteMe
-	/usr/local/bin/python2 ./install.py --clang-completer
+	/usr/local/bin/python3 ./install.py
 }
