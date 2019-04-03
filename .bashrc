@@ -8,12 +8,8 @@ export PATH=~/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin
 
 alias  bp="vim ~/.bash_profile"
 alias  rc="vim ~/.bashrc"
-alias  ep="vim $BASH_HOME/module_python_spark.sh"
-alias  ew="vim $BASH_HOME/module_work.sh"
-alias  ev="vim $BASH_HOME/module_vim.sh"
-alias  eg="vim $BASH_HOME/module_git.sh"
-alias  er="vim $BASH_HOME/module_ruby.sh"
-alias  et="vim $BASH_HOME/module_tmux.sh"
+alias  eg="vim ~/bash_customization-home_general.sh"
+alias  ew="vim ~/bash_customization-home_work.sh"
 alias  so=". ~/.bash_profile"
 
 alias  setup_tmux="vim ~/.tmux/tmux-home"
@@ -50,21 +46,6 @@ alias  state_machine="cd $CODE_HOME/Data_analysis/First/state_machines_ds/"
 # source other files
 source ~/.keys
 # for f in $BASH_HOME/*.sh; do source $f; done
-source $BASH_HOME/module_git.sh
-source $BASH_HOME/module_python_spark.sh
-source $BASH_HOME/module_ruby.sh
-source $BASH_HOME/module_tmux.sh
-source $BASH_HOME/module_vim.sh
-source $BASH_HOME/module_work.sh
+source ~/bash_customization-home_general.sh
+source ~/bash_customization-home_work.sh
 
-# added by Anaconda3 5.1.0 installer
-export PATH="/Applications/anaconda3/bin:$PATH"
-
-add_conda_kernels () {
-	conda activate py3
-	python -m ipykernel install --user --name myenv --display-name "py3"
-	conda deactivate
-	conda activate py27
-	python -m ipykernel install --user --name myenv --display-name "py27"
-	conda deactivate
-}
