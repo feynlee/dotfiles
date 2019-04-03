@@ -1,3 +1,5 @@
+export SFN_DIR="/Users/ziyue/Code/Data_Analysis/First/state_machines_ds"
+
 alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
 alias hstop="/usr/local/Cellar/hadoop/2.6.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/stop-dfs.sh"
 alias zepstart="~/App_build/zeppelin-0.7.1-bin-all/bin/zeppelin-daemon.sh start"
@@ -12,18 +14,27 @@ get_premover() {
 	/Applications/anaconda3/envs/py27/bin/python $FIRST_HOME/pipeline/premover/premover_download_upload.py $1 $2
 }
 
+load_scored_data_to_predictive_people() {
+	python $FIRST_HOME/augment-services/resources/databricks/predictive-people/start_load.py "$@"
+}
+
+presign_url() {
+	aws s3 presign --expires-in 604800 $1
+}
 
 # sync
 sync_spark() {
-	aws s3 sync $FIRST_HOME/vesta/src/main/Pyspark_2.0/ s3://predictive-model/code/Li/Spark_national_model/
-	aws s3 sync $FIRST_HOME/davinci/ s3://predictive-model/code/Li/davinci/
+	# sync vesta folder
+	aws s3 sync $FIRST_HOME/vesta/vesta/ s3://first-io-datalake-production/user/Li/code/vesta/ --exclude "*.git/*" --exclude ".idea/*" --delete
+	# zip davinci package
 	cd $FIRST_HOME
+	cd davinci
+	rm davinci.zip
 	zip -r davinci.zip davinci
-	aws s3 cp davinci.zip s3://predictive-model/code/Li/davinci.zip
-	# cd ~/OneDrive/Code/Data_analysis/First/spark/src/main/Pyspark_2.0/
-	# zip -r lib.zip lib
-	# aws s3 cp lib.zip s3://predictive-model/code/Li/custom_modules/lib.zip
-	# rm lib.zip
+	# sync davinci package
+	aws s3 sync $FIRST_HOME/davinci/ s3://first-io-datalake-production/user/Li/code/davinci/ --exclude "*.git/*" --exclude ".idea/*" --delete
+	# sync serects
+	aws s3 cp $HOME/.davinci_secrets.yml s3://first-io-datalake-production/user/Li/code/.davinci_secrets.yml
 }
 
 
@@ -35,9 +46,21 @@ upload_spark() {
 	aws s3 cp $FIRST_HOME/spark/src/main/Pyspark_2.0/ s3://predictive-model/code/Li/Spark_national_model/ --recursive
 }
 
+sync_reports() {
+	conda deactivate
+	source activate py3
+	jupyter nbconvert --ExecutePreprocessor.kernel_name=python --to html --execute $FIRST_HOME/data_analysis/index.ipynb --output $FIRST_HOME/data_analysis/reports/index.html --template=report.tpl
+	conda deactivate
+	aws s3 sync $FIRST_HOME/data_analysis/reports s3://first-io-data-analysis/data_science --include "*.html" --exclude "*.DS_Store" --exclude ".*" --exclude "*.py" --delete
+	aws cloudfront create-invalidation --distribution-id EHIS1O5LAO3RR --paths '/*'
+}
 
 # ssh
 ec2_li() {
+    ssh -i ~/.ssh/ziyueli_first.pem ubuntu@$@
+}
+
+ec2_li_bastion() {
     ssh -i ~/.ssh/ziyueli_first.pem ubuntu@$1
 }
 
@@ -51,6 +74,10 @@ spark_li_web() {
 
 spark_li() {
 	ssh -i ~/.ssh/ziyueli_first.pem hadoop@$1
+}
+
+spark_li_bastion() {
+	ssh hadoop@$1
 }
 
 spark_test() {
@@ -69,8 +96,20 @@ dockerCsvCleanUp() {
 	docker run -it --rm -p 9000:9000 -v /Users/ziyue/OneDrive/Code/Data_analysis/First/data_pipeline:/mnt/notebooks jupyter-first:1.0.0
 }
 
+dockerBuildFetchAndRun () {
+	cd $FIRST_HOME/docker/list_scoring-test
+	docker build -t fetch_and_run .
+	docker tag fetch_and_run:latest 485000428307.dkr.ecr.us-west-2.amazonaws.com/fetch_and_run:latest
+	docker push 485000428307.dkr.ecr.us-west-2.amazonaws.com/fetch_and_run:latest
+}
 
 
+# AWS
+delete_sfn_and_lambdas () {
+	cd $FIRST_HOME
+	cd state_machines_ds
+	python delete.py
+}
 
 #####################################################
 # old functions for county models (to be deprecated)
