@@ -37,11 +37,13 @@ alias  import="cd $CODE_HOME/Data_analysis/First/data_pipeline/Import_score"
 alias  spark="cd $CODE_HOME/Data_analysis/First/spark/"
 alias  vesta="cd $CODE_HOME/Data_analysis/First/vesta/"
 alias  cortex="cd $CODE_HOME/Data_analysis/First/cortex/"
+alias  ecr="cd $CODE_HOME/Data_analysis/First/ECR_images/"
 alias  pipeline="cd $CODE_HOME/Data_analysis/First/pipeline/"
 alias  davinci="cd $CODE_HOME/Data_analysis/First/davinci/"
 alias  analysis="cd $CODE_HOME/Data_analysis/First/data_analysis/"
 alias  lead="cd $CODE_HOME/Data_analysis/First/list_scoring_projects/"
 alias  state_machine="cd $CODE_HOME/Data_analysis/First/state_machines_ds/"
+alias  aug="cd $CODE_HOME/Data_analysis/First/augment-services/"
 #eval "$(thefuck --alias fuck)"
 
 # source other files
