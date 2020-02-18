@@ -40,10 +40,13 @@ alias  cortex="cd $CODE_HOME/Data_analysis/First/cortex/"
 alias  ecr="cd $CODE_HOME/Data_analysis/First/ECR_images/"
 alias  pipeline="cd $CODE_HOME/Data_analysis/First/pipeline/"
 alias  davinci="cd $CODE_HOME/Data_analysis/First/davinci/"
+alias  davinci_dev="cd $CODE_HOME/Data_analysis/First/davinci_dev/"
 alias  analysis="cd $CODE_HOME/Data_analysis/First/data_analysis/"
 alias  lead="cd $CODE_HOME/Data_analysis/First/list_scoring_projects/"
 alias  state_machine="cd $CODE_HOME/Data_analysis/First/state_machines_ds/"
 alias  aug="cd $CODE_HOME/Data_analysis/First/augment-services/"
+alias  auto="cd $CODE_HOME/Data_analysis/First/automation-services/"
+alias  glue="cd $CODE_HOME/Data_analysis/First/glue-scripts/"
 #eval "$(thefuck --alias fuck)"
 
 # source other files
@@ -52,3 +55,13 @@ source ~/.keys
 source ~/bash_customization-home_general.sh
 source ~/bash_customization-home_work.sh
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
