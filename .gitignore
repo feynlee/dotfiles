@@ -5,5 +5,6 @@
 **/bundle/*
 **/.vim/view/*
 first_secrets/*
+.jupyter/lab
 
 !**/.gitkeep
