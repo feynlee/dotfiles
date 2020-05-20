@@ -2,6 +2,7 @@
 
  ```bash
 # Install the dotfiles
-git clone https://github.com/feynlee/dotfiles.git ~/Code/dotfiles
+git clone git@github.com:feynlee/dotfiles.git ~/Code/dotfiles/dotfiles_home
 # Set up all the things
-cd ~/Code/dotfiles && ./bootstrap.sh
+cd ~/Code/dotfiles/dotfiles_home && stow -R -v -t ~
+```
