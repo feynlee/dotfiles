@@ -8,9 +8,11 @@ export PATH=~/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin
 
 alias  zp="vim ~/.zprofile"
 alias  zrc="vim ~/.zshrc"
-alias  zenv="vim ~/.zshenv"
+alias  zv="vim ~/.zshenv"
 alias  eg="vim ~/bash_customization-home_general.sh"
 alias  ew="vim ~/bash_customization-home_work.sh"
+alias  eth="vim $DOTFILES_HOME/dotfiles_tools_li/.ohmyzsh_customization/themes/blinks.zsh-theme"
+alias  eb="vim $CODE_HOME/bootstrap/bootstrap_home/bootstrap.sh"
 alias  so=". ~/.zprofile"
 
 alias  setup_tmux="vim ~/.tmux/tmux-home"
