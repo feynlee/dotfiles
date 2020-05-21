@@ -6,18 +6,18 @@ export DOTFILES_HOME="$HOME/Code/dotfiles"
 export BASH_HOME="~/bash"
 export PATH=~/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin/:$PATH
 
-alias  bp="vim ~/.bash_profile"
-alias  rc="vim ~/.bashrc"
+alias  zp="vim ~/.zprofile"
+alias  zrc="vim ~/.zshrc"
+alias  zenv="vim ~/.zshenv"
 alias  eg="vim ~/bash_customization-home_general.sh"
 alias  ew="vim ~/bash_customization-home_work.sh"
-alias  so=". ~/.bash_profile"
+alias  so=". ~/.zprofile"
 
 alias  setup_tmux="vim ~/.tmux/tmux-home"
 
 alias  first="cd $CODE_HOME/Data_analysis/First"
 alias  data="cd $CODE_HOME/Data_analysis; Jupyter notebook"
 alias  code="cd $CODE_HOME"
-alias  bootstrap="cd $CODE_HOME/bootstrap"
 alias  dot="cd $DOTFILES_HOME"
 alias  doth="cd $DOTFILES_HOME/dotfiles_home"
 alias  dotp="cd $DOTFILES_HOME/dotfiles_private"

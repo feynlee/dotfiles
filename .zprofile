@@ -1,5 +1,6 @@
 source ~/.keys
-source ~/.bashrc
+source ~/.zshrc
+source ~/.zshenv
 
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
