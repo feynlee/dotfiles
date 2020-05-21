@@ -3,6 +3,7 @@ function _prompt_char() {
 	  echo "%{%F{cyan}%}└─ %{%f%k%b%}"
     # echo "%{%F{blue}%}±%{%f%k%b%}"
   else
+	  echo "%{%F{cyan}%}└─ %{%f%k%b%}"
     echo ' '
   fi
 }
@@ -19,12 +20,12 @@ esac
 
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%B%F{blue}%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{${bkg}}%B%F{green}%}]"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{${bkg}}%B%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 PROMPT='%f%k%b%
-%{%B%K{${bkg}}%F{green}%}%n%{%}@%{%}%m %{%b%K{${bkg}}%B%F{yellow}%}%~%{%B%F{27}%}$(git_prompt_info)%E%{%f%k%b%}
+%{%B%K{${bkg}}%F{green}%}%n%{%}@%{%}%m %{%b%K{${bkg}}%B%F{yellow}%}%~%{%B%f%}$(git_prompt_info)%E%{%f%k%b%}
 %{%K{${bkg}}%}$(_prompt_char)%{%B%K{${bkg}}%F{cyan}%}%#%{%f%k%b%} '
 
 RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'
