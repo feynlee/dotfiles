@@ -97,3 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"

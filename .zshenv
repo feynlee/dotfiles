@@ -5,6 +5,7 @@ export CODE_HOME="$HOME/Code"
 export DOTFILES_HOME="$HOME/Code/dotfiles"
 export BASH_HOME="~/bash"
 export PATH=~/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin/:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 alias  zp="vim ~/.zprofile"
 alias  zrc="vim ~/.zshrc"
@@ -45,7 +46,7 @@ alias  cortex="cd $CODE_HOME/Data_analysis/First/cortex/"
 alias  ecr="cd $CODE_HOME/Data_analysis/First/ECR_images/"
 alias  pipeline="cd $CODE_HOME/Data_analysis/First/pipeline/"
 alias  davinci="cd $CODE_HOME/Data_analysis/First/davinci/"
-alias  davinci_dev="cd $CODE_HOME/Data_analysis/First/davinci_dev/"
+alias  davincicore="cd $CODE_HOME/Data_analysis/First/davincicore/"
 alias  analysis="cd $CODE_HOME/Data_analysis/First/data_analysis/"
 alias  de="cd $CODE_HOME/Data_analysis/First/data_engineering/"
 alias  lead="cd $CODE_HOME/Data_analysis/First/list_scoring_projects/"
