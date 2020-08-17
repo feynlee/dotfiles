@@ -102,3 +102,19 @@ export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Applications/Anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Applications/Anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Applications/Anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Applications/Anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
