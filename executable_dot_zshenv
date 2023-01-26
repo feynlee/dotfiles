@@ -1,0 +1,100 @@
+export AWS_PROFILE="default"
+export CODE_HOME="$HOME/Code"
+export DOTFILES_HOME="$HOME/Code/dotfiles"
+export BASH_HOME="~/bash"
+export DEV_HOME="/Users/ziyue.li/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Developer"
+# export N_PREFIX=$HOME/.n
+# export PATH=$N_PREFIX/bin:/usr/local/opt/:/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:~/bin:~/.local/bin/:$PATH
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# For EBI local testing
+export PYTHON_CONFIGS=$HOME/python_configs
+
+
+alias  zp="chezmoi edit ~/.zprofile"
+alias  zrc="chezmoi edit ~/.zshrc"
+alias  zv="chezmoi edit ~/.zshenv"
+# alias  eg="vim ~/bash_customization-home_general.sh"
+alias  ew="chezmoi edit ~/bash_customization-home_work.sh"
+alias  eth="vim $DOTFILES_HOME/dotfiles_tools_li/.ohmyzsh_customization/themes/blinks.zsh-theme"
+alias  eb="vim $CODE_HOME/bootstrap/bootstrap_home/bootstrap.sh"
+# alias  so=". ~/.zprofile"
+
+alias  setup_tmux="vim ~/.tmux/tmux-home"
+
+alias  first="cd $CODE_HOME/Data_analysis/First"
+alias  data="cd $CODE_HOME/Data_analysis; Jupyter notebook"
+# alias  code="cd $CODE_HOME"
+alias  dev="cd $DEV_HOME/Developer"
+alias  pp="cd $DEV_HOME/personal_projects"
+alias  repos="cd $DEV_HOME/repos"
+alias  site="cd $DEV_HOME/sites"
+
+alias  bootstrap="cd $CODE_HOME/bootstrap"
+alias  themes="cd $ZSH_CUSTOM/themes/"
+alias  dot="cd $DOTFILES_HOME"
+alias  doth="cd $DOTFILES_HOME/dotfiles_home"
+alias  dotp="cd $DOTFILES_HOME/dotfiles_private"
+alias  dott="cd $DOTFILES_HOME/dotfiles_tools_li"
+alias  dotf="cd $DOTFILES_HOME/first_secrets"
+alias  learning="cd ~/Code/learning"
+alias  model="cd $CODE_HOME/Data_analysis/First/predictive-model"
+alias  nmodel="cd $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li"
+alias  batch="vim $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li/lib/_resources/Batch_list.csv"
+alias  combine="vim $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li/_resources/Combine_list.csv"
+alias  mixbatch="vim $CODE_HOME/Data_analysis/First/predictive-model/ipython/New_model-Ziyue_Li/_resources/Mix_scoring_list.csv"
+alias  secrets="vim ~/.davinci/secrets.yaml"
+alias  keys="vim ~/.keys"
+alias  mrfolder="cd $CODE_HOME/Data_analysis/First/java-mapreduce"
+alias  mrcode="cd $CODE_HOME/Data_analysis/First/java-mapreduce/src/main/java/io/first/mapreduce"
+alias  cleanup="cd $CODE_HOME/Data_analysis/First/csv_clean_up"
+alias  import="cd $CODE_HOME/Data_analysis/First/data_pipeline/Import_score"
+alias  spark="cd $CODE_HOME/Data_analysis/First/spark/"
+alias  vesta="cd $CODE_HOME/Data_analysis/First/vesta/"
+alias  cortex="cd $CODE_HOME/Data_analysis/First/cortex/"
+alias  ecr="cd $CODE_HOME/Data_analysis/First/ECR_images/"
+alias  pipeline="cd $CODE_HOME/Data_analysis/First/pipeline/"
+alias  davinci="cd $CODE_HOME/Data_analysis/First/davinci/"
+alias  davincicore="cd $CODE_HOME/Data_analysis/First/davincicore/"
+alias  analysis="cd $CODE_HOME/Data_analysis/First/data_analysis/"
+alias  de="cd $CODE_HOME/Data_analysis/First/data_engineering/"
+alias  lead="cd $CODE_HOME/Data_analysis/First/list_scoring_projects/"
+alias  state_machine="cd $CODE_HOME/Data_analysis/First/state_machines_ds/"
+alias  aug="cd $CODE_HOME/Data_analysis/First/augment-services/"
+alias  auto="cd $CODE_HOME/Data_analysis/First/automation-services/"
+alias  glue="cd $CODE_HOME/Data_analysis/First/glue-scripts/"
+alias  so="source ~/.zshenv && source ~/.zprofile source ~/.zshrc"
+
+alias  link_dotfiles="stow -v -R -t ~ ."
+
+
+#eval "$(thefuck --alias fuck)"
+
+
+# ENV Variables
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+
+# source other files
+source ~/.keys
+
+precmd () {
+	source ~/.zshenv
+	chezmoi apply
+}
+
+# for f in $BASH_HOME/*.sh; do source $f; done
+# source ~/bash_customization-home_general.sh
+# source ~/bash_customization-home_work.sh
+
+
+# # tabtab source for serverless package
+# # uninstall by removing these lines or running `tabtab uninstall serverless`
+# [ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# # tabtab source for sls package
+# # uninstall by removing these lines or running `tabtab uninstall sls`
+# [ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# # tabtab source for slss package
+# # uninstall by removing these lines or running `tabtab uninstall slss`
+# [ -f /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Applications/Anaconda3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bashexport PATH="/Users/ziyue.li/Applications/quarto/bin:$PATH"
+. "$HOME/.cargo/env"
