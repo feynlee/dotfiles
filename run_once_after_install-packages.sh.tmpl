@@ -11,6 +11,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || echo "rust ins
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "oh-my-zsh installation failed"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions || echo "installation of zsh-autosuggestions failed"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting || echo "installation of zsh-syntax-highlighting failed"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || echo "installation of powerlevel10k failed"
+
+
+# create folders for vim swaps
+mkdir ~/tmp ~/tmp/backup ~/tmp/swap
 
 {{ else if eq .chezmoi.os "linux" -}}
 # linux
