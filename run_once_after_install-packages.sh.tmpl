@@ -1,7 +1,8 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 # brew
-brew bundle install
+brew bundle install || echo "Brew installation failed"
+brew tap homebrew/cask-fonts && brew install font-hack-nerd-font || echo "Brew installation of Nerd Font failed"
 
 # n, npm, node
 curl -L https://bit.ly/n-install | bash -s -- -y || echo "n installation failed"
