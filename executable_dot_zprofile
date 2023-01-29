@@ -3,11 +3,13 @@
 # source ~/.keys
 # source ~/.zshrc
 # source ~/.zshenv
-echo '# Set PATH, MANPATH, etc., for Homebrew.'
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/:/usr/local/Cellar:~/bin:~/.local/bin/:/usr/local/opt/openssl/bin:/opt/homebrew/bin:$PATH:$HOME/.tmux:$HOME/.rvm/bin:~/App_build
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/:/usr/local/Cellar:~/bin:~/.local/bin/:/usr/local/opt/openssl/bin:$PATH:$HOME/.tmux:$HOME/.rvm/bin:~/App_build
+echo '# Set PATH, MANPATH, etc., for Homebrew.'
+export HOME_BREW=$(brew --prefix)
+echo 'eval "$(${HOME_BREW}/bin/brew shellenv)"'
+eval "$(${HOME_BREW}/bin/brew shellenv)"
+
 
 
 # RUBY
