@@ -3,6 +3,9 @@
 # source ~/.keys
 # source ~/.zshrc
 # source ~/.zshenv
+echo '# Set PATH, MANPATH, etc., for Homebrew.'
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/:/usr/local/Cellar:~/bin:~/.local/bin/:/usr/local/opt/openssl/bin:$PATH:$HOME/.tmux:$HOME/.rvm/bin:~/App_build
 
