@@ -17,7 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 
 # create folders for vim swaps
-mkdir ~/tmp ~/tmp/backup ~/tmp/swap
+mkdir ~/tmp ~/tmp/backup ~/tmp/swap || echo "already exists"
 
 {{ else if eq .chezmoi.os "linux" -}}
 # linux
