@@ -6,7 +6,7 @@ source ~/.zshrc
 
 # brew
 brew bundle install || echo "Brew installation failed"
-brew tap homebrew/cask-fonts && brew install font-hack-nerd-font || echo "Brew installation of Nerd Font failed"
+# brew tap homebrew/cask-fonts && brew install font-hack-nerd-font || echo "Brew installation of Nerd Font failed"
 sudo chown -R $(whoami) $(brew --prefix)/* || echo "failed to change owner of brew folders"
 
 # n, npm, node
