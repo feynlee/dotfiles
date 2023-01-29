@@ -1,18 +1,19 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 # brew
-/* brew bundle install */
+brew bundle install
 
 # n, npm, node
-/* curl -L https://bit.ly/n-install | bash -s -- -y */
+curl -L https://bit.ly/n-install | bash -s -- -y || echo "n installation failed"
 
 # rust
-/* curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh */
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || echo "rust installation failed"
 
 # oh-my-zsh
-/* sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" */
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "oh-my-zsh installation failed"
 
 {{ else if eq .chezmoi.os "linux" -}}
-#!/bin/sh
-sudo apt install ripgrep
-{{ end -}}
+# linux
+{{ else }}
+# other operating system
+{{ end }}
