@@ -13,9 +13,9 @@ export PYTHON_CONFIGS=$HOME/python_configs
 alias  zp="chezmoi edit ~/.zprofile"
 alias  zrc="chezmoi edit ~/.zshrc"
 alias  zv="chezmoi edit ~/.zshenv"
-# alias  eg="vim ~/bash_customization-home_general.sh"
+alias  eg="chezmoi edit ~/bash_customization-home_general.sh"
 alias  ew="chezmoi edit ~/bash_customization-home_work.sh"
-alias  eth="vim $DOTFILES_HOME/dotfiles_tools_li/.ohmyzsh_customization/themes/blinks.zsh-theme"
+# alias  eth="chezmoi edit $DOTFILES_HOME/dotfiles_tools_li/.ohmyzsh_customization/themes/blinks.zsh-theme"
 alias  eb="vim $CODE_HOME/bootstrap/bootstrap_home/bootstrap.sh"
 # alias  so=". ~/.zprofile"
 
@@ -84,8 +84,8 @@ precmd () {
 }
 
 # for f in $BASH_HOME/*.sh; do source $f; done
-# source ~/bash_customization-home_general.sh
-# source ~/bash_customization-home_work.sh
+source ~/bash_customization-home_general.sh
+source ~/bash_customization-home_work.sh
 
 
 # # tabtab source for serverless package
