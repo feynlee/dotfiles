@@ -3,7 +3,7 @@ export DAVINCI_HOME="$CODE_HOME/Data_analysis/First/davinci"
 export VESTA_HOME="$CODE_HOME/Data_analysis/First/vesta"
 export DATA_HOME="$CODE_HOME/Data_analysis/First/data"
 
-export PYTHONPATH=/Applications/Anaconda3
+export PYTHONPATH=/Applications/Anaconda3:$PYTHONPATH
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib/native"
 export PYTHONIOENCODING="utf-8"
 export PYTHONDONTWRITEBYTECODE=""
@@ -15,7 +15,6 @@ export HOMEBREW_OPT="/usr/local/opt"
 export JAVA_HOME=$HOMEBREW_OPT/openjdk@11
 export SPARK_HOME=$HOMEBREW_OPT/apache-spark/libexec
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH
-export PYTHONPATH='/Users/ziyue.li/Library/Application Support/pdm/venv/lib/python3.7/site-packages/pdm/pep582':$PYTHONPATH
 export PATH=$JAVA_HOME/bin:$SPARK_HOME/bin:$PYTHONPATH:$PATH
 export PATH=$PATH:~/App_build
 
