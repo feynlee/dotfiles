@@ -1,3 +1,4 @@
+source ~/.secrets
 export AWS_PROFILE="default"
 export CODE_HOME="$HOME/Code"
 export DOTFILES_HOME="$HOME/Code/dotfiles"
