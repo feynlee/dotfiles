@@ -66,6 +66,7 @@ alias  auto="cd $CODE_HOME/Data_analysis/First/automation-services/"
 alias  glue="cd $CODE_HOME/Data_analysis/First/glue-scripts/"
 alias  so="source ~/.zshenv && source ~/.zprofile source ~/.zshrc"
 alias  ai="cd $AI_HOME"
+alias  sd="cd $AI_HOME && webui.sh"
 
 alias  link_dotfiles="stow -v -R -t ~ ."
 
