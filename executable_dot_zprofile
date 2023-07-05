@@ -3,7 +3,7 @@
 # source ~/.keys
 # source ~/.zshrc
 # source ~/.zshenv
-export PATH=$HOME/Library/Python/3.10/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/:/usr/local/Cellar:~/bin:~/.local/bin/:/usr/local/opt/openssl/bin:/opt/homebrew/bin:$PATH:$HOME/.tmux:$HOME/.rvm/bin:~/App_build:$HOME/opt/anaconda3/bin:/Applications/anaconda3/bin
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/ruby/bin:$HOME/Library/Python/3.10/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/:/usr/local/Cellar:~/bin:~/.local/bin/:/usr/local/opt/openssl/bin:$PATH:$HOME/.tmux:$HOME/.rvm/bin:~/App_build:$HOME/opt/anaconda3/bin:/Applications/anaconda3/bin
 
 # Set PATH, MANPATH, etc., for Homebrew.
 export HOME_BREW=$(brew --prefix)
