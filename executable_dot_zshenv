@@ -84,7 +84,7 @@ source ~/.keys
 
 precmd () {
 	source ~/.zshenv
-	chezmoi apply
+	# chezmoi apply
 }
 
 # for f in $BASH_HOME/*.sh; do source $f; done
