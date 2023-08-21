@@ -6,7 +6,7 @@ source ~/.zshrc
 
 # brew
 brew bundle install || echo "Brew installation failed"
-# brew tap homebrew/cask-fonts && brew install font-hack-nerd-font || echo "Brew installation of Nerd Font failed"
+brew tap homebrew/cask-fonts && brew install font-hack-nerd-font || echo "Brew installation of Nerd Font failed"
 sudo chown -R $(whoami) $(brew --prefix)/* || echo "failed to change owner of brew folders"
 
 # n, npm, node
@@ -22,6 +22,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || echo "installation of powerlevel10k failed"
 
 
+# vim vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # create folders for vim swaps
 mkdir ~/tmp ~/tmp/backup ~/tmp/swap || echo "already exists"
 
