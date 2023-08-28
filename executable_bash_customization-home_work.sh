@@ -37,7 +37,7 @@ first_lftp () {
 get_premover() {
 	# /Applications/anaconda3/envs/py27/bin/python $FIRST_HOME/pipeline/premover/premover_download_upload.py $1 $2
 	conda deactivate
-	conda activate py39
+	conda activate py310
 	python $FIRST_HOME/vesta/scripts/data_processing/premover_download_upload.py $1 $2
 	conda deactivate
 }
