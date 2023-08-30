@@ -36,6 +36,11 @@
 # 	  echo -ne '\e[5 q' # Use beam shape cursor on startup.
 # 	  preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+gitd () {
+	git branch -d $1
+	git push origin --delete $1
+}
+
 gemail () {
 	git filter-branch --env-filter '
 	OLD_EMAIL="$1"
