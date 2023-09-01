@@ -49,13 +49,13 @@ sync_score_importing_scripts() {
 
 exec_vesta_pipeline() {
 	conda deactivate
-	conda activate py39
+	conda activate py310
 	python $FIRST_HOME/automation-services/vesta_pipeline/scripts/exec_vesta_pipeline.py "$@"
 }
 
 load_scored_data_to_predictive_addresses() {
 	conda deactivate
-	conda activate py39
+	conda activate py310
 	which python
 	python $FIRST_HOME/automation-services/vesta_pipeline/scripts/import_scores.py "$@"
 	conda deactivate
