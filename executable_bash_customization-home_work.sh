@@ -3,7 +3,7 @@ export DAVINCI_HOME="$CODE_HOME/Data_analysis/First/davinci"
 export VESTA_HOME="$CODE_HOME/Data_analysis/First/vesta"
 export DATA_HOME="$CODE_HOME/Data_analysis/First/data"
 
-export PYTHONPATH=/Applications/Anaconda3:$PYTHONPATH
+export PYTHONPATH=$HOME/Local_installations/miniforge3:/Applications/Anaconda3:$PYTHONPATH
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib/native"
 export PYTHONIOENCODING="utf-8"
 export PYTHONDONTWRITEBYTECODE=""
